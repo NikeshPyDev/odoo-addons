@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_users_view_form_rest" model="ir.ui.view">
+        <field name="name">res.users.form.view.rest</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    name="generate_access_token"
+                    string="Generate Access Token"
+                />
+            </header>
+            <notebook position="inside">
+                <page string="Technical Settings">
+                    <group>
+                        <field name="access_token" readonly="1"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
